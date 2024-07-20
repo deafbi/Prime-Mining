@@ -21,8 +21,8 @@ This is a terminal-based application for mining prime numbers using the Sieve of
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/prime-miner-terminal.git
-    cd prime-miner-terminal
+    git clone https://github.com/deafbi/Prime-Mining.git
+    cd Prime-Mining
     ```
 
 2. Install the required packages:
@@ -45,8 +45,3 @@ This is a terminal-based application for mining prime numbers using the Sieve of
 2. **Share Chain:** Generates a base64 encoded string of the chain information which can be shared with others.
 3. **Load and Verify Chain:** Allows you to paste a base64 encoded string of an external chain to verify its legitimacy.
 4. **Exit:** Exits the application.
-
-## Example
-
-### Display Stats
-
