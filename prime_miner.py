@@ -203,7 +203,7 @@ class PrimeMiner:
                 break
             else:
                 print(Fore.RED + "Invalid option. Please try again.")
-                print(Fore.YELLOW + "Press Enter to continue...", getpass.getpass())
+                getpass.getpass(prompt="Press Enter to continue...")
 
 if __name__ == "__main__":
     miner = PrimeMiner()
