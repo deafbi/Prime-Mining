@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Verify Chain</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">Verify Chain</h1>
+      <form method="post">
+        <div class="form-group">
+          <label for="encoded_string">Paste the shareable string:</label>
+          <textarea class="form-control" id="encoded_string" name="encoded_string" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Verify</button>
+      </form>
+
+      {% if result %}
+        <div class="mt-5">
+          {% if result == 'valid' %}
+            <div class="alert alert-success">
+              <h4 class="alert-heading">Chain Verification Result: Valid</h4>
+              <p><strong>Most Recent Prime:</strong> {{ most_recent_prime }}</p>
+              <p><strong>Primes Found:</strong> {{ primes_found }}</p>
+              <p><strong>Merkle Root:</strong> {{ merkle_root }}</p>
+            </div>
+          {% elif result == 'invalid' %}
+            <div class="alert alert-danger">
+              <h4 class="alert-heading">Chain Verification Result: Invalid</h4>
+              <p>The provided chain could not be verified.</p>
+            </div>
+          {% elif result == 'error' %}
+            <div class="alert alert-danger">
+              <h4 class="alert-heading">Error</h4>
+              <p>There was an error decoding or the shareable string was invalid.</p>
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <a href="{{ url_for('index') }}" class="btn btn-secondary mt-3">Back to Stats</a>
+    </div>
+  </body>
+</html>
