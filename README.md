@@ -34,10 +34,16 @@ This is a terminal-based application for mining prime numbers using the Sieve of
 
 1. Run the application:
     ```sh
-    python app.py
+    python prime_miner.py
     ```
 
-2. Use the menu to navigate through the application.
+    or run this to also use the web gui
+
+   ```
+   python app.py
+   ```
+
+3. Use the menu to navigate through the application.
 
 ## Menu Options
 
